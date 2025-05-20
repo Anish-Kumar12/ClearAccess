@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,11 +17,13 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.0",
     "typeorm": "^0.3.24"
   },
   "devDependencies": {
     "@types/express": "^5.0.2",
     "@types/node": "^22.15.20",
+    "@types/pg": "^8.15.2",
     "typescript": "^5.8.3"
   }
 }

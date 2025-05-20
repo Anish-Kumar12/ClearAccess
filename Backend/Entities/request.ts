@@ -1,24 +1,24 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
-import { User } from "./User";
-import { Software } from "./Software";
+import { User } from "./user";
+import { Software } from "./software";
 
 @Entity()
 export class Request {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @ManyToOne(() => User, (user) => user.requests)
-  user: User;
+  user!: User;
 
   @ManyToOne(() => Software, (software) => software.requests)
-  software: Software;
+  software!: Software;
 
   @Column()
-  accessType: 'Read' | 'Write' | 'Admin';
+  accessType!: 'Read' | 'Write' | 'Admin';
 
   @Column("text")
-  reason: string;
+  reason!: string;
 
   @Column()
-  status: 'Pending' | 'Approved' | 'Rejected';
+  status!: 'Pending' | 'Approved' | 'Rejected';
 }

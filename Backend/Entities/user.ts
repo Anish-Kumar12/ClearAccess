@@ -9,14 +9,14 @@ export class User {
   id!: number;
 
   @Column({ unique: true })
-  username: string;
+  username!: string;
 
   @Column()
-  password: string;
+  password!: string;
 
   @Column({ type: "enum", enum: ['Employee', 'Manager', 'Admin'] })
-  role: UserRole;
+  role!: UserRole;
 
   @OneToMany(() => Request, (request) => request.user)
-  requests: Request[];
+  requests!: Request[];
 }
